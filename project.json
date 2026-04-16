@@ -1,0 +1,21 @@
+{
+  "overview": "GlucoCare is a diabetes management app that lets patients log and track blood glucose readings over time. It also includes an educational Critical Analyst section that helps users explore the limitations of BMI through an interactive graph and an athlete case study.",
+  "features": [
+    "Blood glucose logging with timestamp and notes",
+    "Glucose history dashboard with 7-day stats",
+    "Interactive BMI inequality graph showing the healthy range curve",
+    "Athlete Anomaly case study with LeBron James BMI analysis",
+    "Reflection prompts on BMI limitations vs. real-world biology",
+    "Login with Internet Identity for persistent personal data"
+  ],
+  "category": "health",
+  "tags": [
+    "diabetes",
+    "health-tracking",
+    "blood-glucose",
+    "bmi",
+    "education",
+    "data-visualization"
+  ],
+  "last_updated": "2026-04-15T17:30:31.402Z"
+}

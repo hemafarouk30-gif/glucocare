@@ -1,0 +1,36 @@
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type GlucoseSummary = 
+ record {
+   avgLast7Days: opt float64;
+   highLast7Days: opt nat;
+   lastReading: opt GlucoseLog;
+   lowLast7Days: opt nat;
+ };
+type GlucoseLogInput = 
+ record {
+   notes: opt text;
+   timestamp: int;
+   value: nat;
+ };
+type GlucoseLog = 
+ record {
+   id: nat;
+   notes: opt text;
+   timestamp: int;
+   value: nat;
+ };
+service : {
+  _initializeAccessControl: () -> ();
+  addGlucoseLog: (input: GlucoseLogInput) -> (nat);
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  deleteGlucoseLog: (logId: nat) -> ();
+  getCallerUserRole: () -> (UserRole) query;
+  getGlucoseLogs: () -> (vec GlucoseLog) query;
+  getGlucoseSummary: () -> (GlucoseSummary) query;
+  isCallerAdmin: () -> (bool) query;
+}

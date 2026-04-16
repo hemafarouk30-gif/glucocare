@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Fraunces";
+    --font-body: "Figtree";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.5rem;
+
+    --background: 0.98 0.01 0;
+    --foreground: 0.22 0.02 0;
+    --card: 1.0 0 0;
+    --card-foreground: 0.22 0.02 0;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.22 0.02 0;
+
+    --primary: 0.58 0.15 166;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.56 0.18 134;
+    --secondary-foreground: 0.98 0 0;
+    --muted: 0.92 0.01 0;
+    --muted-foreground: 0.48 0.01 0;
+
+    --accent: 0.62 0.19 24;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.92 0.01 0;
+    --input: 0.96 0.01 0;
+    --ring: 0.58 0.15 166;
+
+    --chart-1: 0.58 0.15 166;
+    --chart-2: 0.56 0.18 134;
+    --chart-3: 0.62 0.19 24;
+    --chart-4: 0.62 0.16 144;
+    --chart-5: 0.52 0.14 100;
+
+    --sidebar: 0.98 0.01 0;
+    --sidebar-foreground: 0.22 0.02 0;
+    --sidebar-primary: 0.58 0.15 166;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.92 0.01 0;
+    --sidebar-accent-foreground: 0.22 0.02 0;
+    --sidebar-border: 0.92 0.01 0;
+    --sidebar-ring: 0.58 0.15 166;
+  }
+
+  .dark {
+    --background: 0.14 0.01 0;
+    --foreground: 0.93 0.01 0;
+    --card: 0.18 0.01 0;
+    --card-foreground: 0.93 0.01 0;
+    --popover: 0.22 0.01 0;
+    --popover-foreground: 0.93 0.01 0;
+
+    --primary: 0.68 0.14 168;
+    --primary-foreground: 0.14 0.01 0;
+
+    --secondary: 0.65 0.16 136;
+    --secondary-foreground: 0.92 0.01 0;
+    --muted: 0.28 0.01 0;
+    --muted-foreground: 0.65 0.01 0;
+
+    --accent: 0.68 0.17 24;
+    --accent-foreground: 0.14 0.01 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.14 0.01 0;
+
+    --border: 0.28 0.01 0;
+    --input: 0.28 0.01 0;
+    --ring: 0.68 0.14 168;
+
+    --chart-1: 0.68 0.14 168;
+    --chart-2: 0.65 0.16 136;
+    --chart-3: 0.68 0.17 24;
+    --chart-4: 0.65 0.15 144;
+    --chart-5: 0.62 0.13 100;
+
+    --sidebar: 0.18 0.01 0;
+    --sidebar-foreground: 0.93 0.01 0;
+    --sidebar-primary: 0.68 0.14 168;
+    --sidebar-primary-foreground: 0.14 0.01 0;
+    --sidebar-accent: 0.28 0.01 0;
+    --sidebar-accent-foreground: 0.85 0.01 0;
+    --sidebar-border: 0.28 0.01 0;
+    --sidebar-ring: 0.68 0.14 168;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-data {
+    @apply font-mono text-sm font-semibold tracking-tight;
+  }
+
+  .elevation-soft {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  .elevation-medium {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.04);
+  }
+}
